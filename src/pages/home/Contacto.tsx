@@ -1,5 +1,5 @@
 const Contacto = ({ lan }: { lan: string }) => {
-  const url = 'http://backend.ligadecapitanes.com.ar/ofmb/assets'
+  const url = 'https://backend.ligadecapitanes.com.ar/ofmb/assets'
 
   return (
     <section
