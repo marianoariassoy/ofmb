@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'wouter'
 import Nav from './Nav'
 import Lan from './Lan'
 
@@ -26,13 +25,16 @@ const Header = () => {
       }`}
     >
       <div className='flex justify-between'>
-        <Link to='/home'>
+        <button
+          className='cursor-pointer'
+          onClick={() => document.getElementById('slider')!.scrollIntoView()}
+        >
           <img
             src='/assets/logo.svg'
             alt='logo'
             className={`transition-all ${scrolled ? 'h-12 lg:h-12' : 'h-16 lg:h-20'}`}
           />
-        </Link>
+        </button>
         <button
           className='lg:hidden'
           onClick={toggleMenu}

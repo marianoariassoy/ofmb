@@ -1,12 +1,11 @@
 interface Data {
   id: number
   image: string
-  name_es: string
-  name_en: string
+  name: string
   contact: string
   education_es: string
   education_en: string
-  admitted: string
+  admitt: string
   languages_es: string
   languages_en: string
   text_es: string
@@ -21,12 +20,12 @@ const EquipoItem = ({ data, lan, index }: { data: Data; lan: string; index: numb
         <div className='aspect-square lg:aspect-auto'>
           <img
             src={data.image}
-            alt={data.name_es}
+            alt={data.name}
             className='w-full h-full object-cover'
           />
         </div>
         <div className='px-4 lg:pl-20 flex flex-col gap-y-4 py-8 lg:py-12'>
-          <h2 className='font-bold lg:text-xl mb-4'>{lan === 'ESP' ? data.name_es : data.name_en}</h2>
+          <h2 className='font-bold lg:text-xl mb-4'>{data.name}</h2>
           <div>{data.contact}</div>
           <hr className='border-primary w-40' />
           <div>
@@ -35,7 +34,7 @@ const EquipoItem = ({ data, lan, index }: { data: Data; lan: string; index: numb
           </div>
           <div>
             <h3 className='font-bold'>{lan === 'ESP' ? 'Admisiones Profesionales' : 'Admitted to practice'}</h3>
-            <p>{data.admitted}</p>
+            <p>{data.admitt}</p>
           </div>
           <div>
             <h3 className='font-bold'>{lan === 'ESP' ? 'Idiomas' : 'Languages'}</h3>

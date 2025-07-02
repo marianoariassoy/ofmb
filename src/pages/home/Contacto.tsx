@@ -1,4 +1,6 @@
 const Contacto = ({ lan }: { lan: string }) => {
+  const url = 'http://backend.ligadecapitanes.com.ar/ofmb/assets'
+
   return (
     <section
       className='relative bg-black text-white '
@@ -52,22 +54,45 @@ const Contacto = ({ lan }: { lan: string }) => {
       <div className='w-full max-w-6xl m-auto px-4'>
         <div className='border-t border-white flex flex-col lg:flex-row gap-2 justify-between text-sm pt-4 pb-8 '>
           <div className='flex flex-col lg:flex-row gap-x-4'>
-            <a
-              href='/assets/2025 - Terms and Conditions of Use OFMB.docx'
-              className='hover:underline'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Terminos y Condiciones
-            </a>
-            <a
-              href='/assets/2025 - Privacy Policy OFMB-.docx'
-              className='hover:underline'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Politicas de Privacidad
-            </a>
+            {lan === 'ESP' ? (
+              <>
+                <a
+                  href={url + '/ofmb-terminos-y-condiciones.docx'}
+                  className='hover:underline'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Terminos y Condiciones
+                </a>
+                <a
+                  href={url + '/ofmb-politicas-de-privacidad.docx'}
+                  className='hover:underline'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Politicas de Privacidad
+                </a>
+              </>
+            ) : (
+              <>
+                <a
+                  href={url + '/ofmb-terminos-y-condiciones-ingles.docx'}
+                  className='hover:underline'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Terms and Conditions
+                </a>
+                <a
+                  href={url + '/ofmb-politicas-de-privacidad-ingles.docx'}
+                  className='hover:underline'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Privacy Policy
+                </a>
+              </>
+            )}
           </div>
           <div>2025 O’FMB. TODOS LOS DERECHOS RESERVADOS</div>
         </div>

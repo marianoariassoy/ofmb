@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Fade } from 'react-slideshow-image'
+import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import Loader from '../../components/Loader'
+import useFetch from '../../hooks/useFetch'
 
 interface Item {
   id: number
@@ -21,6 +22,7 @@ const SliderItem = ({ data, lan }: SliderItemProps) => {
   useEffect(() => {
     const image = new Image()
     image.src = data.image
+
     image.onload = () => {
       setIsLoading(false)
     }
@@ -54,26 +56,7 @@ const SliderItem = ({ data, lan }: SliderItemProps) => {
 }
 
 const Slider = ({ lan }: { lan: string }) => {
-  const data = [
-    {
-      id: 1,
-      image: '/assets/slider/home1.jpg',
-      title_es: 'COMUNICACIÓN TRANSPARENTE',
-      title_en: 'TRANSPARENT COMMUNICATION'
-    },
-    {
-      id: 2,
-      image: '/assets/slider/home2.jpg',
-      title_es: 'DEDICACIÓN CONSTANTE',
-      title_en: 'COMPREHENSIVE SUPPORT'
-    },
-    {
-      id: 3,
-      image: '/assets/slider/home3.jpg',
-      title_es: 'ACOMPAÑAMIENTO INTEGRAL',
-      title_en: 'UNWAVERING DEDICATION'
-    }
-  ]
+  const { data, loading } = useFetch(`/home`)
 
   const sliderProperties = {
     autoplay: true,
@@ -86,17 +69,28 @@ const Slider = ({ lan }: { lan: string }) => {
     pauseOnHover: false
   }
 
+  if (loading)
+    return (
+      <div className='w-full h-full aspect-video'>
+        <Loader />
+      </div>
+    )
+
   return (
-    <div className='w-full h-full'>
-      <Fade {...sliderProperties}>
-        {data.map(item => (
-          <SliderItem
-            key={item.id}
-            data={item}
-            lan={lan}
-          />
-        ))}
-      </Fade>
+    <div
+      className='w-full h-full'
+      id='slider'
+    >
+      <Slide {...sliderProperties}>
+        {data &&
+          data.map(item => (
+            <SliderItem
+              key={item.id}
+              data={item}
+              lan={lan}
+            />
+          ))}
+      </Slide>
     </div>
   )
 }
