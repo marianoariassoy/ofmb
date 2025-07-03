@@ -6,14 +6,14 @@ interface LanContextType {
 }
 
 const defaultValue: LanContextType = {
-  lan: 'ESP',
+  lan: 'ENG',
   setLan: () => {} // función vacía por defecto
 }
 
 export const Context = createContext<LanContextType>(defaultValue)
 
 export const ContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [lan, setLan] = useState<string>('ESP')
+  const [lan, setLan] = useState<string>('ENG')
 
   return <Context.Provider value={{ lan, setLan }}>{children}</Context.Provider>
 }

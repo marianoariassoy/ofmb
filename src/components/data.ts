@@ -7,7 +7,7 @@ export const menu = [
   },
   {
     title_es: 'Areas de Practica',
-    title_en: 'Our Areas of Practices',
+    title_en: 'AREAS of PRACTICE',
     url: '',
     tag: 'practicas'
   },

@@ -30,18 +30,18 @@ const EquipoItem = ({ data, lan, index }: { data: Data; lan: string; index: numb
           <hr className='border-primary w-40' />
           <div>
             <h3 className='font-bold'>{lan === 'ESP' ? 'Formación Académica' : 'Education'}</h3>
-            <p>{lan === 'ESP' ? data.education_es : data.education_en}</p>
+            <p className='whitespace-break-spaces'>{lan === 'ESP' ? data.education_es : data.education_en}</p>
           </div>
           <div>
             <h3 className='font-bold'>{lan === 'ESP' ? 'Admisiones Profesionales' : 'Admitted to practice'}</h3>
-            <p>{data.admitt}</p>
+            <p className='whitespace-break-spaces'>{data.admitt}</p>
           </div>
           <div>
             <h3 className='font-bold'>{lan === 'ESP' ? 'Idiomas' : 'Languages'}</h3>
-            <p>{lan === 'ESP' ? data.languages_es : data.languages_en}</p>
+            <p className='whitespace-break-spaces'>{lan === 'ESP' ? data.languages_es : data.languages_en}</p>
           </div>
           <hr className='border-primary w-40' />
-          <p>{lan === 'ESP' ? data.text_es : data.text_en}</p>
+          <p className='whitespace-break-spaces'>{lan === 'ESP' ? data.text_es : data.text_en}</p>
           <a
             href={data.linkedin}
             target='_blank'

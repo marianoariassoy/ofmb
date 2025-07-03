@@ -11,11 +11,14 @@ const Contacto = ({ lan }: { lan: string }) => {
           <h1 className='font-bold text-xl text-black'>{lan === 'ESP' ? 'contacto' : 'contact us'}</h1>
         </div>
       </div>
-      <img
-        src='/assets/images/contacto.jpg'
-        alt='Contacto'
-        className='w-full'
-      />
+      <div className='aspect-video'>
+        <img
+          src='/assets/images/contacto-crop.jpg'
+          alt='Contacto'
+          className='w-full h-full object-cover'
+        />
+      </div>
+
       <div className='w-full max-w-6xl m-auto flex justify-between py-12 px-4'>
         <div className='flex flex-col gap-y-4 text-sm'>
           <h2 className='font-bold lg:text-xl text-primary'>{lan === 'ESP' ? 'Contacto' : 'Contact Us'}</h2>
@@ -30,8 +33,10 @@ const Contacto = ({ lan }: { lan: string }) => {
             110 East 31st Street 4th Floor, <br /> New York, NY 10016
           </div>
           <hr className='border-primary w-40' />
+          <h2 className='font-bold lg:text-xl text-primary'>
+            {lan === 'ESP' ? 'Para asuntos de inmigración ' : 'For immigration matters'}
+          </h2>
           <div>
-            <h3>{lan === 'ESP' ? 'Para asuntos de inmigración ' : 'For immigration matters'}</h3>
             +1 786 5890864 <br />
             333 NE 24th St, Suite 309, <br />
             Miami, FL, USA 33137 <br />
@@ -94,7 +99,7 @@ const Contacto = ({ lan }: { lan: string }) => {
               </>
             )}
           </div>
-          <div>2025 O’FMB. TODOS LOS DERECHOS RESERVADOS</div>
+          <div>{lan === 'ESP' ? '2025 O’FMB. Todos los derechos reservados' : '2025 O’FMB. All rights reserved  '}</div>
         </div>
       </div>
     </section>
