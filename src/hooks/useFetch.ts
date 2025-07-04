@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-const apiUrl = 'https://api.ofmb.law/'
+const apiUrl = 'https://api.ofmb.law'
 import axios from 'axios'
 
 function useFetch(url: string) {
