@@ -24,7 +24,7 @@ const EquipoItem = ({ data, lan, index }: { data: Data; lan: string; index: numb
             className='w-full h-full object-cover'
           />
         </div>
-        <div className='px-4 lg:pl-20 flex flex-col gap-y-4 py-8 lg:py-12'>
+        <div className='px-4 lg:pl-12 flex flex-col gap-y-4 py-8 lg:py-12'>
           <h2 className='font-bold lg:text-xl mb-4'>{data.name}</h2>
           <div>{data.contact}</div>
           <hr className='border-primary w-40' />

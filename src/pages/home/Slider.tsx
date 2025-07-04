@@ -35,7 +35,7 @@ const SliderItem = ({ data, lan }: SliderItemProps) => {
   ) : (
     <div className='relative h-screen w-full'>
       <div className='absolute w-full left-0 top-1/2 z-20 px-4'>
-        <div className='w-full flex flex-col gap-2 lg:gap-4 max-w-6xl m-auto p-8 lg:p-12 backdrop-blur-md bg-black/30 text-center'>
+        <div className='w-full flex flex-col gap-2 lg:gap-4 max-w-3xl m-auto p-8 backdrop-blur-md bg-black/30 text-center'>
           <span className='text-primary font-medium text-sm'>
             {lan === 'ESP'
               ? 'DERECHO CORPORATIVO, COMERCIAL Y EMPRESARIAL GENERAL, y DERECHO MIGRATORIO'

@@ -7,7 +7,7 @@ const Contacto = ({ lan }: { lan: string }) => {
       id='contacto'
     >
       <div className='absolute w-full top-0 z-20 hidden lg:block'>
-        <div className='w-full max-w-6xl m-auto px-4 pt-12 lg:pt-32'>
+        <div className='w-full max-w-6xl m-auto px-4 lg:px-8 pt-12 lg:pt-32'>
           <h1 className='font-bold text-xl text-black'>{lan === 'ESP' ? 'contacto' : 'contact us'}</h1>
         </div>
       </div>
@@ -19,7 +19,7 @@ const Contacto = ({ lan }: { lan: string }) => {
         />
       </div>
 
-      <div className='w-full max-w-6xl m-auto flex justify-between py-12 px-4'>
+      <div className='w-full max-w-6xl m-auto flex justify-between py-12 px-4 lg:px-8'>
         <div className='flex flex-col gap-y-4 text-sm'>
           <h2 className='font-bold lg:text-xl text-primary'>{lan === 'ESP' ? 'Contacto' : 'Contact Us'}</h2>
           <div>
@@ -56,7 +56,7 @@ const Contacto = ({ lan }: { lan: string }) => {
           />
         </div>
       </div>
-      <div className='w-full max-w-6xl m-auto px-4'>
+      <div className='w-full max-w-6xl m-auto px-4 lg:px-8'>
         <div className='border-t border-white flex flex-col lg:flex-row gap-2 justify-between text-sm pt-4 pb-8 '>
           <div className='flex flex-col lg:flex-row gap-x-4'>
             {lan === 'ESP' ? (

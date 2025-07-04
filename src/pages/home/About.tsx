@@ -1,7 +1,7 @@
 const About = ({ lan }: { lan: string }) => {
   return (
     <section>
-      <div className='w-full max-w-6xl m-auto px-4 py-12 mt-8 lg:mt-20 flex flex-col lg:flex-row gap-x-20 gap-y-8'>
+      <div className='w-full max-w-6xl m-auto px-4 lg:px-8 py-12 mt-8 lg:mt-20 flex flex-col lg:flex-row gap-x-20 gap-y-8'>
         <div className='pt-2'>
           <img
             src='/assets/logo2.svg'
